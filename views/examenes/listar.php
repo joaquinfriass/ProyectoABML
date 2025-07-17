@@ -69,7 +69,7 @@
         <tr>
             <td><?= $e['id'] ?></td>
             <td><?= $e['materia'] ?></td>
-            <td><?= $e['fecha_examen'] ?></td>
+            <td><?php echo date("d-m-Y", strtotime($e['fecha_examen'])); ?></td>
             <td>
                 <a href="examenes.php?accion=editar&id=<?= $e['id'] ?>">✏️</a>
                 <a href="examenes.php?accion=eliminar&id=<?= $e['id'] ?>" onclick="return confirm('¿Eliminar examen?')">🗑️</a>
